@@ -1,7 +1,7 @@
 //Dillon Zhang
 //SoftDev2 pd03
-//HW2B -- Dot, Dot, Dot
-//2016-02-11
+//HW03 -- Circle
+//2016-02-22
 
 var size = 538;
 var canvas = document.getElementById("playground");
