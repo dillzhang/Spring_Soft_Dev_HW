@@ -45,7 +45,32 @@ var stop = function stop() {
     window.cancelAnimationFrame(requestID);
 }
 
+//DVD
+var xcor = 1
+var ycor = 1
+var dx = 1
+var dy = 1
+var logo = new Image();
+logo.src = "logo_dvd.jpg"
+var imageX = 90;
+var imageY = 60;
+var dvd = function dvd() {
+    clear();
+    ctx.drawImage(logo, xcor, ycor, imageX, imageY);
+    if (xcor + dx < 1 + 1 || xcor + imageX + dx > size - 1) {
+	dx = -dx;
+    }
+    if (ycor + dy < 1 + 1 || ycor + imageY + dy > size - 1) {
+	dy = -dy;
+    }
+    xcor += dx;
+    ycor += dy;
+    requestID = window.requestAnimationFrame(dvd);
+}
+
 document.getElementById("start").addEventListener("click", animation);
+document.getElementById("dvd").addEventListener("click", dvd);
 document.getElementById("stop").addEventListener("click", stop);
+document.getElementById("clear").addEventListener("click", clear);
 //Draws the border of the canvas for initialization
 clear();
