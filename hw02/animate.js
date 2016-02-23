@@ -27,6 +27,7 @@ var circle = function circle(radius) {
 //Animate Circle
 var radius = 1;
 var delta = 1;
+var requestID;
 var animation = function animation() {
     radius = radius + delta;
     if (Math.abs(size/4 - radius) > size/4) {
@@ -35,10 +36,16 @@ var animation = function animation() {
     }
     clear();
     circle(radius);
-    window.requestAnimationFrame(animation);
+    requestID = window.requestAnimationFrame(animation);
+}
+
+//Stop
+var stop = function stop() {
+    console.log("Stop it")
+    window.cancelAnimationFrame(requestID);
 }
 
 document.getElementById("start").addEventListener("click", animation);
-document.getElementById("stop").addEventListener("click", clear);
+document.getElementById("stop").addEventListener("click", stop);
 //Draws the border of the canvas for initialization
 clear();
