@@ -41,21 +41,20 @@ var animation = function animation() {
 
 //Stop
 var stop = function stop() {
-    console.log("Stop it")
     window.cancelAnimationFrame(requestID);
 }
 
 //DVD
 var xcor = 1
 var ycor = 1
-var dx = 1
-var dy = 1
+var dx = 3
+var dy = 3
 var logo = new Image();
 logo.src = "logo_dvd.jpg"
 var imageX = 90;
 var imageY = 60;
 var dvd = function dvd() {
-    clear();
+    //clear();
     ctx.drawImage(logo, xcor, ycor, imageX, imageY);
     if (xcor + dx < 1 + 1 || xcor + imageX + dx > size - 1) {
 	dx = -dx;
