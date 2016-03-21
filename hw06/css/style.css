@@ -1,0 +1,12 @@
+div {
+    font: 10px sans-seriff;
+    text-align:right;
+    border-style:solid;
+    color: white;
+    padding:3px;
+    margin:1px;
+}
+
+h1 {
+    text-align:center;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Republican Delegate Count </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <button id="switch"> Change Parties </button>
+    <h1> Republican Delegate Count </h1>
+    <table align="center">
+      <tr> <th> Type of Delegate </th> <th> Bar </th> <th> Amount </th></tr>
+      <tr> <td> Allocated </td> <td> <div id="key0"> < State > <span> - < # of Delegates > </span> </div> </td> <td id="alloted_total"> </td> </tr>
+      <tr> <td> Not Allocated </td> <td> <div id="key1"> < State > <span> - < # of Delegates > </span> </div> </td> <td id="not_lot_total"> </td> </tr>
+      <tr> <td> Total </td> <td> </td> <td id="total"> </td> </tr>
+    </table>
+    <div class="alloted"></div>
+    <div class="not_lot"></div>
+  </body>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="index.js"></script>
+</html>
