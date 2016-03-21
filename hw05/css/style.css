@@ -1,8 +1,12 @@
-.chart div {
-    font: 10 px sans-seriff;
+div {
+    font: 10px sans-seriff;
     text-align:right;
-    background-color: blue;
+    border-style:solid;
     color: white;
     padding:3px;
     margin:1px;
+}
+
+h1 {
+    text-align:center;
 }
