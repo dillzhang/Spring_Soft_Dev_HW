@@ -37,13 +37,13 @@ var not_lot_nums = [[58, 40, 42, 95, 28, 16, 38, 71, 19, 57, 36, 34, 28, 44, 172
 var counter = 1;
 var createbars = function() {
     counter = (counter + 1) % 2
-    d3.select("title").text(party[counter] + " Delegate Count");
-    d3.select("h1").text(party[counter] + " Delegate Count").style("color", colors[counter][0]);
-    d3.select("#key0").style("background-color", colors[counter][0]);
-    d3.select("#key1").style("background-color", colors[counter][1]);
-    d3.select("#alloted_total").text(totals[counter][0]);
-    d3.select("#not_lot_total").text(totals[counter][1]);
-    d3.select("#total").text(totals[counter][2]);
+    d3.select("title").transition().text(party[counter] + " Delegate Count");
+    d3.select("h1").transition().text(party[counter] + " Delegate Count").style("color", colors[counter][0]);
+    d3.select("#key0").transition().style("background-color", colors[counter][0]);
+    d3.select("#key1").transition().style("background-color", colors[counter][1]);
+    d3.select("#alloted_total").transition().text(totals[counter][0]);
+    d3.select("#not_lot_total").transition().text(totals[counter][1]);
+    d3.select("#total").transition().text(totals[counter][2]);
 
     
     d3.select(".alloted").selectAll("div").remove();
