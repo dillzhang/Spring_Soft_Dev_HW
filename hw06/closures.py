@@ -31,8 +31,8 @@
 # print b(2)
 
 
-def repeat(x):
-    return lambda stringer: stringer * x
+def repeat(stringer):
+    return lambda count: stringer * count
 
 r1 = repeat('hello')
 r2 = repeat('goodbye')
