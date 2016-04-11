@@ -26,7 +26,7 @@ def metaFunc(f):
         temp = f(*args)
         # Changed to printing rather than returning because of recursive calls
         print ("Function: " + f.func_name +
-               "\nArguments: " + str(*args) +
+               "\nArguments: " + str([arg for arg in args]) +
                "\nValue: " + str(temp))
         return temp
     return meta
