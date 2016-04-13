@@ -1,4 +1,5 @@
-var searchStock = function searchStock() {
+var searchStock = function searchStock(e) {
+    e.preventDefault();
     stockTicker = document.getElementById("stockTicker").value;
     initialInvestment = document.getElementById("initialInvestment").value;
     $.get("/search",{stockTicker:stockTicker, initialInvestment:initialInvestment}, function(e){

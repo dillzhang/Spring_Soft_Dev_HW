@@ -1,10 +1,12 @@
 from os import urandom
 import urllib2
 import json
+import debug
 
 secret_key = urandom(32)
 
 
+@debug.metaFunc
 def getJSON(stockTicker):
     url = "http://dev.markitondemand.com/MODApis/Api/v2/Quote/json?symbol="
     url += stockTicker
@@ -13,6 +15,7 @@ def getJSON(stockTicker):
     return responce
 
 
+@debug.metaFunc
 def guessTicker(company):
     url = "http://dev.markitondemand.com/MODApis/Api/v2/Lookup/json?input="
     url += company
@@ -23,6 +26,7 @@ def guessTicker(company):
     return responce[0]['Symbol']
 
 
+@debug.metaFunc
 def getReturn(stockTicker, investment):
     information = {}
     investment = int(investment)
@@ -40,8 +44,8 @@ def getReturn(stockTicker, investment):
     return information
 
 
+@debug.metaFunc
 def getInfo():
-    print "starting getInfo"
     f = open("stockTicker.csv", "r")
     stocks = f.read().split("\n")
     f.close()
